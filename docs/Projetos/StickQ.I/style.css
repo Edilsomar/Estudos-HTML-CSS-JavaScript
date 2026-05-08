@@ -13,6 +13,7 @@
     padding:  0px 30px;
     height: 100px;
     color: #fff;
+    width: 100vw;
     
 
     .logo{
@@ -332,8 +333,5 @@ main{
             }
         }
         
-    }
-    main{ 
-        background-color: red;
     }
 }
