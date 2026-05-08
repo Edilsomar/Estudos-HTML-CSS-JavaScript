@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+    box-shadow: #0000008e 0px 2px 8px 0px;
+    padding:  0px 30px;
+    height: 100px;
+    color: #fff;
+    
+
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+    h1{
+        font-size: 2rem;
+        span{
+            color: rgb(56, 127, 168);
+        }
+    }
+    .AddPostItBtn{
+       border-radius: 10px;
+       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+       border: none;
+       background-color: #8fe67e;
+       transition: transform 0.5s ease;
+    }
+    .AddPostItBtn:hover{
+        transform: rotate(90deg);
+    }
+    .AddPostItBtn:active{
+        transform: scale(0.8);
+        box-shadow: inset 3px 3px 4px rgba(2, 2, 2, 0.623);
+        transform: rotate(270deg);
+    }
+}
+body{
+    background-color: #f3fdff;
+}
+main{
+    display: flex; /*Era Flex*/
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: auto;
+
+    .PostItsConteiner{
+        display: grid;
+        grid-template-columns: 400px 400px 400px; 
+        justify-content: center; 
+        gap: 10px;
+        padding: 5px 40px;
+        
+        .PostIt{
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 1s ease-in-out; 
+            transform: scale(1);
+
+        &.PostIt:active{
+            transform: scale(0.9);
+        }
+
+            .headerPostIt{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #232635;
+                border-radius: 10px 10px 0px 0px; 
+                padding: 15px 10px;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                .LetsGoPhrase{
+                    color: white;
+                }
+            }
+            div{
+                .editButton{
+                    padding: 3px;
+                    margin: 0 2px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: rgb(187, 187, 187);
+                    transition-duration: 0.5s ;
+
+                    &.editButton:hover{
+                        transform: scale(1.1);
+                    }
+                    &.editButton:active{
+                        transform: scale(0.9);
+                    }
+                }
+                    
+                }
+                .deleteButton{
+                    margin: 0 2px;
+                    padding: 3px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: rgb(187, 187, 187);
+                    transition-duration: 0.5s ;
+
+                    &.deleteButton:hover{
+                        transform: scale(1.1);
+                    }
+                    &.deleteButton:active{
+                        transform: scale(0.9);
+                    }
+            }
+
+            .PostItContent{
+                padding: 5px 10px;
+
+                .PostItFront{
+                    padding: 0px 20px;
+                    color: #232635;
+                }
+                .PostItBack{
+                    text-align: center;
+                    display: none; 
+                    padding-top: 15px;
+                    
+                }
+            }
+        }
+    } 
+}
+
+.modal{
+    display: none; /*Toggle*/
+    background-color: #818181;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: 1000;
+    padding:  12px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    
+    .modalInsideBorder{
+        border: 0.5px solid rgba(121, 121, 121, 0.555);
+        border-radius: 10px;
+        padding: 30px 20px;
+        background-color: #fff;
+
+        .inputFrontModalBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            border-radius: 10px;
+            padding: 10px 0px;
+
+            h3{
+            width: 90%;
+            padding: 10px 0;
+            color: rgb(36, 36, 36);
+            }
+
+            .inputFrontModal{
+                padding: 0px 15px;
+                width: 90%;
+                min-height: 50px;
+                outline: none;
+                border: 1px solid rgba(51, 51, 51, 0.623);
+                border-radius: 10px;
+                
+            }
+        }
+
+        .inputBackModalBox{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: left;
+                border-radius: 10px;
+                padding: 10px 0px;
+                margin: 10px 0px;
+
+                h3{
+                    width: 90%;
+                    padding: 10px 0;
+                    color: rgb(36, 36, 36);
+            }
+
+            .inputBackModal{
+                padding: 0px 15px;
+                width: 90%;
+                min-height: 130px;
+                outline: none;
+                border: 1px solid rgba(51, 51, 51, 0.623);
+                border-radius: 10px;
+                
+            }
+        }
+        .inputModalColorBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+
+             h3{
+                color: rgb(36, 36, 36);
+             }
+
+            div{
+                display: flex;
+                margin: 10px 0px;
+                gap: 10px;
+                align-items: center;
+                
+            }
+            
+        }
+        
+    }
+    .modalBtns{
+       display: flex;
+       justify-content: center;
+       gap: 20px;
+       
+       .submitBtn{
+        background-color: rgb(8, 46, 102);
+        color: #fff;
+        padding: 10px;
+        width: 100px;
+        border-radius: 10px;
+        border: 0;
+       }
+       .cancelBtn{
+        background-color: rgb(153, 33, 33);
+        color: #fff;
+        padding: 10px;
+        width: 100px;
+        border-radius: 10px;
+        border: 0;
+       }
+    }
+}
+.overlay{
+    display: none; /*Toggle era block*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.418);
+    filter: 999;
+    top: 0;
+}
+@media screen and (max-width: 1240px){
+    main{
+
+    .PostItsConteiner{
+        display: grid;
+        grid-template-columns: 400px 400px ;
+        .PostIt{
+            width: 400px;
+            height: 300px; 
+        }
+    }
+}   
+}
+@media screen and (max-width: 835px){
+    main{
+
+    .PostItsConteiner{
+        display: grid;
+        grid-template-columns: 400px; 
+    
+        .PostIt{
+            width: 400px;
+            height: 300px;
+            }
+        }
+    }
+}
+@media screen and (max-height: 560px){
+    .modal{
+        padding: 5px;
+
+        .modalInsideBorder{
+        padding: 10px 5px;
+
+            .inputFrontModalBox{
+                padding: 5px;
+
+                h3{
+                    padding: 5px 0px;
+                }
+                .inputFrontModal{
+                    padding: 0px 5px;
+                    min-height: 25px;
+                    height: 30px;
+                    border-radius: 5px;
+                    
+                }
+            }
+            .inputBackModalBox{
+                padding: 5px;
+
+                h3{
+                    padding: 5px 0px;
+                }
+                .inputBackModal{
+                    padding: 0px 5px;
+                    min-height: 25px;
+                    height: 80px;
+                    border-radius: 5px;
+                    
+                }
+            }
+
+            .inputModalColorBox{
+
+                h3{
+                    display: none;
+                }
+
+                .inputModalLetterColor{
+                    
+                }
+            }
+        }
+        
+    }
+    main{ 
+        background-color: red;
+    }
+}

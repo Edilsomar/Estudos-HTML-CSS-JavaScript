@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/StickQ.I.png" type="image/x-icon">
+    <title>STICK-Q.I</title>
+</head>
+<body>
+    <header class="mainHeader">
+        <h1>Stick<span>Q.I</span></h1>
+        <button onclick="openModal()" class="AddPostItBtn"><img src="icons/icons8-soma-48.png" alt="Soma_icon"></button>
+    </header>
+    <main>
+        <div class="PostItsConteiner">
+            
+        </div>
+
+    </main>
+
+    <div class="overlay"></div>
+
+    <div class="modal" >
+            <div class="modalInsideBorder">
+
+                <div class="inputFrontModalBox">
+                    <h3>Sticky Notes Front:</h3>
+                    <input 
+                    class="inputFrontModal" 
+                    type="text"
+                    placeholder="Type here you post-it Front...">
+                </div>
+
+                <div class="inputBackModalBox">
+                    <h3>Sticky Notes Back:</h3>
+                    <input 
+                    class="inputBackModal" 
+                    type="text"
+                    placeholder="Type here you post-it Back...">
+                </div>
+
+                <div class="inputModalColorBox">
+
+                    <h3>Choose the color of your sticky notes here.</h3>
+                    
+                    <div>
+                        <p>Letter Color:</p>
+                        <input
+                        class="inputModalLetterColor"
+                        type="color"
+                        value="#333333">
+                    
+                        <p>Background Color:</p>
+                        <input
+                        class="InputModalBackgroundColor"
+                        type="color"
+                        value="#d6ff41">
+                    </div>
+                </div>
+
+                <div class="modalBtns">
+                    <button onclick="addTask()" class="submitBtn">Submit</button>
+                    <button onclick="closeModal()" class="cancelBtn">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+        
+     <script src="script.js"></script>
+</body>
+</html>
