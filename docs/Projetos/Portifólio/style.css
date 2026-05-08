@@ -83,10 +83,10 @@ main{
     justify-content: center;
     margin: 20px;
 }
-.projeto1, .projeto2{
+.projeto1, .projeto2, .projeto3{
     transition-duration: 1s;
 }
-.projeto1:hover, .projeto2:hover{
+.projeto1:hover, .projeto2:hover, .projeto3:hover{
     transform: scale(1.1); 
 }
 .projetos .tituloProjeto{
