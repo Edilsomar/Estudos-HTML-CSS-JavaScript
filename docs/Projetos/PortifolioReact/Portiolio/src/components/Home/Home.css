@@ -1,0 +1,59 @@
+.Home-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
+    height: 110vh;
+
+        h1{
+            margin: 15px 0px;
+            font-size: 2.3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.493);
+
+            span{
+                color :#206EB8;
+            }
+        }
+        p{
+            margin: 15px 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.493);
+            
+        }
+        a{
+            display:block;
+            background-color: #084a96;
+            padding: 10px 15px;
+            margin: 15px auto;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px;
+            border: 1px solid white;
+            width: 170px;
+            transition-duration: 0.8s;
+            box-shadow: rgba(255, 255, 255, 0.39) 0px 1px 6px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.493);
+            
+            animation: blink 1.3s infinite;
+
+        }
+        a:hover{
+            transform: scale(1.1);
+            background-color: #4A89D3;
+            box-shadow: rgba(255, 255, 255, 0.39) 0px 1px 15px;
+
+        }
+        a:active{
+            transform: scale(0.9);
+            background-color: #04274e;
+            box-shadow: rgba(255, 255, 255, 0.39) 0px 1px 40px;
+
+        }
+}
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #ffffff; }
+}

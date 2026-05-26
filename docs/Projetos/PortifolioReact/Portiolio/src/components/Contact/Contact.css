@@ -1,0 +1,22 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .contact-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        background-color: #273036;
+        padding: 20px 25px;
+        border-radius: 10px;
+        box-shadow: rgba(24, 23, 23, 0.329) 0px 1px 4px;
+    }
+}
+@media (max-width: 700px){
+    .contact-content{
+        width: 95% !important;
+    }
+}

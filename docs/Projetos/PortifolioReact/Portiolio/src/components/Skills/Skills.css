@@ -1,0 +1,122 @@
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   h2{
+    text-align:center;
+    color:white;
+    margin:50px 0px 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.493);
+
+   }
+   .content-container{
+        display:flex;
+        gap:50px;
+        
+
+        .about-me-container{
+            display:flex;
+            width: 600px;
+            background-color:rgba(19, 51, 102, 0.274);
+            border-radius: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.281);
+            box-shadow: rgba(0, 0, 0, 0.637) 0px 1px 4px;
+
+            img{
+                width: 250px;
+                border-radius: 15px 0px 0px 15px;
+                
+            }
+            .about-me-description{
+                padding: 20px;
+                color:#fff;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.493);
+
+
+                h3{
+                    font-size: 2rem;
+                    margin:10px;
+                    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
+                }
+                p{
+                    font-size: 1.5rem;
+                    margin:10px;
+
+                }
+            }
+        }
+        .skills-list{
+            color:#fff;
+            margin: 0px auto;
+
+            li{
+                display: flex;
+                align-items:center;
+                font-size: 1.3rem;
+                list-style: none;
+                margin: 10px 0px;
+                padding: 6px;
+                text-shadow: 2px 2px 5px rgba(24, 24, 24, 0.397);
+
+                .JsIcon{
+                    color: yellow;
+                    width:30px
+                }
+                .HtmlIcon{
+                    color: #DC4A24;
+                    width:30px
+                }
+                .CssIcon{
+                    Color: #244BDC;
+                    width:30px
+                }
+                .GithubIcon{
+                    color:#03030e;
+                    width:30px
+                }
+                .ReactIcon{
+                    color: #5DD3F3;
+                    width:30px
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px){
+    .content-container{
+        flex-direction: column;
+    }
+}
+@media (max-width: 700px){
+    
+    .about-me-container{
+        display:flex;
+        width: 400px !important;   
+         img{
+                width: 200px !important;
+                height: 250px;
+                border-radius: 15px 0px 0px 15px;
+                
+            }
+            .about-me-description{
+                width: 300px !important;
+                height: 250px;
+
+
+                h3{
+                    font-size: 1.2rem !important;
+                    margin:5px;
+                    
+                }
+                p{
+                    font-size: 1rem !important;
+                    margin:5px;
+
+                }
+    }
+    
+}
+}

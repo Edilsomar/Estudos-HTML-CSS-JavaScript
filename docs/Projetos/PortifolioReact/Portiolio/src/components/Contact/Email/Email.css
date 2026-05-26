@@ -1,0 +1,30 @@
+.email-link{
+    color:#6d6d6d;
+    background-color:#f8fafd;
+    text-decoration: none;
+    padding: 10px 15px;
+    border:1px solid rgba(124, 124, 124, 0.295);
+    border-radius:10px;
+    width: 130px;
+    transition-duration: 0.5s;
+    box-shadow: rgba(24, 23, 23, 0.329) 0px 1px 4px;
+
+
+    p{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap: 5px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+
+        .email-icon{
+            color:#fa2f2b;
+
+        }
+    }
+}
+.email-link:hover{
+    background-color: #c5c5c5;
+    transform:scale(1.1);
+    border:1px solid rgba(255, 255, 255, 0.479);
+}

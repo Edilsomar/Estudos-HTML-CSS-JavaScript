@@ -1,0 +1,103 @@
+.projects-content-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  .project-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Aumentado para dar mais respiro aos elementos */
+    background-color: #1e293b; /* Cinza escuro/grafite premium para Dark Mode */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borda sutil clara em vez de preta pura */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 20px; /* Sombra mais espalhada e suave */
+    color: white;
+    width: 350px;
+    text-decoration: none;
+    transition-duration: 0.8s;
+    
+
+    .project-name {
+      font-size: 1.3rem; /* Tamanho fixado para dar destaque ao título */
+      font-weight: 600;
+      text-align: center;
+      padding: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      transition-duration: 0.8s;
+    }
+
+    .project-img {
+      width: 100%; /* Ocupa a largura disponível respeitando o padding */
+      max-width: 310px;
+      height: 180px; /* Proporção 16:9 ajustada (250px deixava a imagem muito esticada verticalmente) */
+      object-fit: cover; /* Recorta a imagem perfeitamente sem distorcer os lados */
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
+      transition-duration: 0.8s;
+    }
+
+    .project-description {
+      font-size: 0.95rem;
+      color: #94a3b8; /* Texto de apoio em cinza claro para destacar o título principal */
+      padding: 12px 10px;
+      text-align: center;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-stacks {
+      display: flex;
+      justify-content: center; /* Centraliza as tecnologias no card */
+      padding: 10px;
+      gap: 10px;
+
+      .stack-name {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.75rem; /* Fonte ligeiramente menor para encaixar melhor as pílulas */
+        padding: 5px 10px; /* Mais horizontal */
+        background-color: rgba(255, 255, 255, 0.05); /* Fundo sutil para a tag */
+        border: 1px solid rgba(255, 255, 255, 0.15); 
+        border-radius: 20px; /* Formato pílula clássico */
+        transition-duration: 0.8s; /* Transição um pouco mais rápida e responsiva */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+
+        .html-icon {
+          color: #DC4A24;
+        }
+        .css-icon {
+          color: #244BDC;
+        }
+        .js-icon {
+          color: #F7DF1E; /* Amarelo JavaScript oficial corrigido para dar leitura */
+        }
+        .react-icon {
+          color: #5DD3F3;
+        }
+      }
+
+      /* Mantido o seu hover original de escala pura */
+      .stack-name:hover {
+        transform: scale(1.2);
+        background-color: rgba(255, 255, 255, 0.1); /* Só acende de leve o fundo da tag */
+      }
+    }
+  }
+}
+.project-link:hover{
+      transform: scale(1.1);
+      transform:translateY(-5px)
+    }
+.project-img:hover{
+  transform: scale(1.05);
+}
+.project-link:active{
+  transform: scale(0.9);
+}
+.project-name:hover{
+  transform: scale(1.1);
+}
